@@ -1,0 +1,2654 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VJMLaE-T8BJX"
+      },
+      "source": [
+        "![rmotr](https://user-images.githubusercontent.com/7065401/52071918-bda15380-2562-11e9-828c-7f95297e4a82.png)\n",
+        "<hr style=\"margin-bottom: 40px;\">\n",
+        "\n",
+        "# NumPy exercises\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LZVWahcp8BJa",
+        "outputId": "07d1bc4c-884c-4999-8740-8ff4482d0aaf"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1.21.6\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Import the numpy package under the name np\n",
+        "import numpy as np\n",
+        "\n",
+        "# Print the numpy version and the configuration\n",
+        "print(np.__version__)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "up9JrpIL8BJh"
+      },
+      "source": [
+        "![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)\n",
+        "\n",
+        "## Array creation"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hW_8UtWn8BJi"
+      },
+      "source": [
+        "### Create a numpy array of size 10, filled with zeros."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KKdbT6KF8BJi",
+        "outputId": "775d2929-a8f9-477a-8dcc-94d5bd157cbd"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "#np.array([0,0,0,0,0,0,0,0,0,0])\n",
+        "np.zeros(10, dtype= int)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ykjMnLea8BJj",
+        "outputId": "e9eee1c0-e8eb-4486-c67f-8a2aedc07f5d"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ],
+      "source": [
+        "#np.array([0] * 10)\n",
+        "np.zeros(10)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "uqGFOCil8BJj"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a numpy array with values ranging from 10 to 49"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Jb2buN-X8BJk",
+        "outputId": "a7ed72d3-ba5e-4dcb-a2ad-7f92617faac6"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,\n",
+              "       27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43,\n",
+              "       44, 45, 46, 47, 48, 49])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "np.arange(10,50)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vT59ZcsH8BJk",
+        "outputId": "96a3581e-7c56-46f1-b4e3-73e854c06108"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,\n",
+              "       27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43,\n",
+              "       44, 45, 46, 47, 48, 49])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ],
+      "source": [
+        "np.arange(10,50)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QqQJQGUd8BJl"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a numpy matrix of 2*2 integers, filled with ones."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 12,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v44p9TiM8BJl",
+        "outputId": "ac362101-a5d2-4cfd-f8f1-8a87681276fc"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1, 1],\n",
+              "       [1, 1]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 12
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "np.ones((2,2), dtype=int)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LpTwbo1J8BJm",
+        "outputId": "86d42ee6-0f42-46d4-eb40-7e9ae6a5ebf0"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\n",
+            "Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n",
+            "  \"\"\"Entry point for launching an IPython kernel.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1, 1],\n",
+              "       [1, 1]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ],
+      "source": [
+        "np.ones([2,2], dtype=np.int)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tGg1LKcw8BJm"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a numpy matrix of 3*2 float numbers, filled with ones."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 16,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Kh5xxrh88BJn",
+        "outputId": "ea8bb010-3f5d-4f66-8baf-1779efb0ff38"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1., 1.],\n",
+              "       [1., 1.],\n",
+              "       [1., 1.]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 16
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "np.ones([3,2], dtype=float)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 15,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nfJkv3m48BJn",
+        "outputId": "d208e00d-3f04-4f94-fadb-23baf730ee35"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: DeprecationWarning: `np.float` is a deprecated alias for the builtin `float`. To silence this warning, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.\n",
+            "Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n",
+            "  \"\"\"Entry point for launching an IPython kernel.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1., 1.],\n",
+              "       [1., 1.],\n",
+              "       [1., 1.]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ],
+      "source": [
+        "np.ones([3,2], dtype=np.float)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cHB02jIi8BJn"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, create a new numpy array with the same shape and type as X, filled with ones."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 44,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OA7IvRKE8BJo",
+        "outputId": "b06f9d5b-fa25-4612-f48f-a8c94aa164d7"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1, 1, 1],\n",
+              "       [1, 1, 1],\n",
+              "       [1, 1, 1]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 44
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "x = np.array([\n",
+        "    [2,3,5],\n",
+        "    [6,3,4],\n",
+        "    [2,78,41]\n",
+        "])\n",
+        "#np.ones_like(x)\n",
+        "np.ones(np.shape(x), x.dtype)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 45,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Xs4rX_418BJo",
+        "outputId": "8f74dda8-9a46-4904-a4bf-d3e4c111b012"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\n",
+            "Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n",
+            "  \"\"\"Entry point for launching an IPython kernel.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 1, 1, 1])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 45
+        }
+      ],
+      "source": [
+        "X = np.arange(4, dtype=np.int)\n",
+        "\n",
+        "np.ones_like(X)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "EBjl93nH8BJo"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, create a new numpy matrix with the same shape and type as X, filled with zeros."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 53,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6VBXcEd48BJp",
+        "outputId": "d92c7712-a8ee-46cd-ba9d-47db00bf5ef2"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[0, 0, 0],\n",
+              "       [0, 0, 0],\n",
+              "       [0, 0, 0]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 53
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "#np.zeros(np.shape(x), x.dtype)\n",
+        "np.zeros_like(x)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 54,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ij-fTnpW8BJp",
+        "outputId": "dcb9bc46-4fe6-4217-ea6a-6d185220b6a2"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\n",
+            "Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n",
+            "  \"\"\"Entry point for launching an IPython kernel.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[0, 0, 0],\n",
+              "       [0, 0, 0]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 54
+        }
+      ],
+      "source": [
+        "X = np.array([[1,2,3], [4,5,6]], dtype=np.int)\n",
+        "\n",
+        "np.zeros_like(X)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "uLZBNRFN8BJp"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a numpy matrix of 4*4 integers, filled with fives."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 61,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LJTWybZB8BJq",
+        "outputId": "4e0b0a40-32d8-4b0c-9bcb-76cc471c321f"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[5, 5, 5, 5],\n",
+              "       [5, 5, 5, 5],\n",
+              "       [5, 5, 5, 5],\n",
+              "       [5, 5, 5, 5]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 61
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "#np.ones([4,4], dtype = int) * 5\n",
+        "z = np.ones([4,4], dtype = int)\n",
+        "z * 5"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 62,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Xy2ki32c8BJq",
+        "outputId": "9bbd5868-6fe3-49df-df3d-df13feb52a8f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\n",
+            "Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n",
+            "  \"\"\"Entry point for launching an IPython kernel.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[5, 5, 5, 5],\n",
+              "       [5, 5, 5, 5],\n",
+              "       [5, 5, 5, 5],\n",
+              "       [5, 5, 5, 5]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 62
+        }
+      ],
+      "source": [
+        "np.ones([4,4], dtype=np.int) * 5"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "V-VpyGuq8BJq"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, create a new numpy matrix with the same shape and type as X, filled with sevens."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 63,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pH96fsUc8BJq",
+        "outputId": "2d2ce5db-f060-4d95-8a22-afd17fdb6127"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[7, 7, 7],\n",
+              "       [7, 7, 7],\n",
+              "       [7, 7, 7]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 63
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "np.ones_like(x) * 7\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 64,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ug2L-Dxv8BJr",
+        "outputId": "82802a5b-4e34-4372-aa11-526a594dcabd"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\n",
+            "Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n",
+            "  \"\"\"Entry point for launching an IPython kernel.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[7, 7],\n",
+              "       [7, 7]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 64
+        }
+      ],
+      "source": [
+        "X = np.array([[2,3], [6,2]], dtype=np.int)\n",
+        "\n",
+        "np.ones_like(X) * 7"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "16FwC27B8BJr"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a 3*3 identity numpy matrix with ones on the diagonal and zeros elsewhere."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 65,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "al8wyZIi8BJr",
+        "outputId": "af7729fd-e921-4967-a6cc-1f762546fd0b"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1., 0., 0.],\n",
+              "       [0., 1., 0.],\n",
+              "       [0., 0., 1.]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 65
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "np.eye(3)\n",
+        "#np.identity(3)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 66,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "plfGUcKd8BJr",
+        "outputId": "3aa04ed4-5f66-4acd-8075-e9917c43744d"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[1., 0., 0.],\n",
+              "       [0., 1., 0.],\n",
+              "       [0., 0., 1.]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 66
+        }
+      ],
+      "source": [
+        "#np.eye(3)\n",
+        "np.identity(3)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MTw_5hD08BJr"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a numpy array, filled with 3 random integer values between 1 and 10."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 73,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qvsYF07m8BJs",
+        "outputId": "294df16d-da1d-40a9-a90b-8030b230cce3"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([ 6, 10,  4])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 73
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "np.random.randint(1, 11, size = 3)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 85,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "F-5dmb0r8BJs",
+        "outputId": "12c5b34d-d781-4588-90ea-2848b401125e"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([6, 5, 9])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 85
+        }
+      ],
+      "source": [
+        "np.random.randint(10, size=3)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1epSg-TX8BJs"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a 3\\*3\\*3 numpy matrix, filled with random float values."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 105,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V0HY983q8BJt",
+        "outputId": "e68c7ee6-540b-4a95-984c-72b098860820"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[[0.57553854, 0.98528663, 0.51005954],\n",
+              "        [0.71902511, 0.98185693, 0.16171327],\n",
+              "        [0.59683672, 0.38327193, 0.09560217]],\n",
+              "\n",
+              "       [[0.240165  , 0.55440342, 0.10489225],\n",
+              "        [0.29019007, 0.2964494 , 0.06330557],\n",
+              "        [0.8156408 , 0.90624365, 0.52706287]],\n",
+              "\n",
+              "       [[0.56779768, 0.01014908, 0.98671903],\n",
+              "        [0.47762118, 0.51878069, 0.02376515],\n",
+              "        [0.01825954, 0.58637619, 0.67193367]]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 105
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "#np.random.randn(3,3,3) #0 to 1 floats\n",
+        "np.random.random([3,3,3])\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 99,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YuNKFN278BJt",
+        "outputId": "65730e52-0d22-4d9f-832f-358b8daf731d"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([[[7.60511636e-01, 2.97263341e-01, 8.88632992e-01],\n",
+              "        [6.97307096e-01, 6.87526017e-01, 5.41934112e-01],\n",
+              "        [9.33140596e-01, 9.41326664e-01, 2.15901876e-02]],\n",
+              "\n",
+              "       [[5.58365899e-01, 1.49074265e-02, 4.63371391e-01],\n",
+              "        [1.48025171e-01, 4.35611548e-01, 1.71831573e-02],\n",
+              "        [2.37237084e-01, 4.38612439e-02, 9.93916587e-01]],\n",
+              "\n",
+              "       [[3.49874451e-01, 8.86787235e-04, 9.57951302e-01],\n",
+              "        [3.24004153e-01, 6.04948156e-01, 7.37250485e-01],\n",
+              "        [8.66348985e-01, 7.33367184e-01, 7.57258114e-01]]])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 99
+        }
+      ],
+      "source": [
+        "np.random.random((3,3,3)) \n",
+        "#np.random.randn(3,3,3) # 0 to 1 floats"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "PPj9iaO98BJt"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X python list convert it to an Y numpy array"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 107,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "spTR_uTD8BJt",
+        "outputId": "efa2cc7c-df48-4568-cff4-73b9cdd26ebb"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[21, 23, 1] <class 'list'>\n",
+            "[21 23  1] <class 'numpy.ndarray'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "x = [21, 23 ,1]\n",
+        "print(x, type(x))\n",
+        "\n",
+        "y = np.array(x)\n",
+        "print(y, type(y))\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 106,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YOjhTop98BJu",
+        "outputId": "52ed3dfd-8cf0-4e77-ff0d-1a56bc602562"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3] <class 'list'>\n",
+            "[1 2 3] <class 'numpy.ndarray'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "X = [1, 2, 3]\n",
+        "print(X, type(X))\n",
+        "\n",
+        "Y = np.array(X)\n",
+        "print(Y, type(Y)) # different type"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "oNdI893B8BJu"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, make a copy and store it on Y."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 111,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Cbz7Lw8A8BJu",
+        "outputId": "c6acc5e2-8b98-4311-eeae-c6d835cefb74"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[4 2 3] 139954848988976\n",
+            "[4 2 3] 139954848988976\n",
+            "[4 2 3] 139954715635312\n"
+          ]
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "x = np.array([4,2,3], dtype = int)\n",
+        "print(x, id(x))\n",
+        "y = x\n",
+        "print(y, id(y))\n",
+        "z = np.copy(x)\n",
+        "print(z, id(z))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 110,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "doElSwXn8BJu",
+        "outputId": "49411674-da46-4b13-f121-20f5404def84"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5 2 3] 139954933474480\n",
+            "[5 2 3] 139954715850576\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:1: DeprecationWarning: `np.int` is a deprecated alias for the builtin `int`. To silence this warning, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.\n",
+            "Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations\n",
+            "  \"\"\"Entry point for launching an IPython kernel.\n"
+          ]
+        }
+      ],
+      "source": [
+        "X = np.array([5,2,3], dtype=np.int)\n",
+        "print(X, id(X))\n",
+        "\n",
+        "Y = np.copy(X)\n",
+        "print(Y, id(Y)) # different id"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c0kFrhSg8BJu"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a numpy array with numbers from 1 to 10"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 112,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7FbO9zGN8BJv",
+        "outputId": "eebff86a-1220-4a3b-eedf-536709d3971a"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 112
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "np.arange(1, 11)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 113,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TKhzv9Fj8BJv",
+        "outputId": "2cc7ac63-11dd-4be9-81d4-ac68a777b04b"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 113
+        }
+      ],
+      "source": [
+        "np.arange(1, 11)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "oVxU18BR8BJv"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a numpy array with the odd numbers between 1 to 10"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 115,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2DEbwZ7d8BJv",
+        "outputId": "3b2ea80a-bbbb-4ddb-ae3d-9149b66913ba"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 3, 5, 7, 9])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 115
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "np.arange(1, 10, 2)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 116,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "n0d4EuiO8BJv",
+        "outputId": "bcf94007-c706-4ed2-8419-6babb122cfce"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([1, 3, 5, 7, 9])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 116
+        }
+      ],
+      "source": [
+        "np.arange(1, 11, 2)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4MU1qq6w8BJw"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a numpy array with numbers from 1 to 10, in descending order."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 125,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5vM6lVLk8BJw",
+        "outputId": "3f102d60-49a4-4135-ca82-555373b3e567"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([10,  9,  8,  7,  6,  5,  4,  3,  2,  1])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 125
+        }
+      ],
+      "source": [
+        "# your code goes here\n",
+        "abs(np.arange(-10,0))\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 124,
+      "metadata": {
+        "cell_type": "solution",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NWOEumc98BJw",
+        "outputId": "c99c797e-280a-45a0-ba0b-926b91daaae1"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "array([10,  9,  8,  7,  6,  5,  4,  3,  2,  1])"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 124
+        }
+      ],
+      "source": [
+        "np.arange(1, 11)[::-1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_2yG3hOL8BJw"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Create a 3*3 numpy matrix, filled with values ranging from 0 to 8"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "fiYa46Hg8BJx"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "dx_qJ1TK8BJx"
+      },
+      "outputs": [],
+      "source": [
+        "np.arange(9).reshape(3,3)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5ucRHcL68BJx"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Show the memory size of the given Z numpy matrix"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "lfGcflN18BJx"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "scrolled": true,
+        "id": "dtgn0y--8BJx"
+      },
+      "outputs": [],
+      "source": [
+        "Z = np.zeros((10,10))\n",
+        "\n",
+        "print(\"%d bytes\" % (Z.size * Z.itemsize))"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3B3zjJ6L8BJy"
+      },
+      "source": [
+        "![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)\n",
+        "\n",
+        "## Array indexation\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "OLlBOQQn8BJy"
+      },
+      "source": [
+        "### Given the X numpy array, show it's first element"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Ad57w5qF8BJy"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "Q-X9FsN78BJy"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array(['A','B','C','D','E'])\n",
+        "\n",
+        "X[0]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "L8X0BRVx8BJz"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, show it's last element"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "RQOUQgDG8BJz"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "5VW9bj-_8BJz"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array(['A','B','C','D','E'])\n",
+        "\n",
+        "#X[len(X)-1]\n",
+        "X[-1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lfY3wkWc8BJz"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, show it's first three elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "xFNVtDNp8BJz"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "1sxODV3I8BJ0"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array(['A','B','C','D','E'])\n",
+        "\n",
+        "X[0:3] # remember! elements start at zero index"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "r_GCZI_R8BJ0"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, show all middle elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Hy9k8YSL8BJ0"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "e0jG-Sg18BJ0"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array(['A','B','C','D','E'])\n",
+        "\n",
+        "X[1:-1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "C5L6n51s8BJ1"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, show the elements in reverse position"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Mhlk9T8J8BJ1"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "LNzDxdfl8BJ1"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array(['A','B','C','D','E'])\n",
+        "\n",
+        "X[::-1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kFKH2Gim8BJ1"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, show the elements in an odd position"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "XeFgSXB98BJ2"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "ctNiuf9r8BJ2"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array(['A','B','C','D','E'])\n",
+        "\n",
+        "#X[[0, 2, -1]]\n",
+        "X[::2]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nTDFRcVc8BJ2"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, show the first row elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "M5gAfO3I8BJ2"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "KnIiyWoY8BJ2"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "X[0]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rRAkiUZW8BJ3"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, show the last row elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "y3mK_IDU8BJ3"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "cx2TRmn38BJ3"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "X[-1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vLHzf_FE8BJ3"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, show the first element on first row"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ChbDQFwg8BJ4"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "aWV5jjWo8BJ4"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "#X[0][0]\n",
+        "X[0, 0]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "PTaJJfMi8BJ4"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, show the last element on last row"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "U_uOm3-_8BJ4"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "2qdwxHVR8BJ4"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "#X[-1][-1]\n",
+        "X[-1, -1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jRfDnuTn8BJ4"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, show the middle row elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "pzO_xKcy8BJ5"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "VBB-KaU_8BJ5"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "#X[1:-1][1:-1] wrong!\n",
+        "X[1:-1, 1:-1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4VeXQibr8BJ5"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, show the first two elements on the first two rows"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "3Hs0H6hf8BJ5"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "Bj4r7SzR8BJ5"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "#X[:2][:2] wrong!\n",
+        "#X[0:2, 0:2]\n",
+        "X[:2, :2]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QhLsIN4K8BJ6"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, show the last two elements on the last two rows"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "rSxdEcos8BJ6"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "3tt5v1WG8BJ6"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "X[2:, 2:]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jvQkLImi8BJ6"
+      },
+      "source": [
+        "![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)\n",
+        "\n",
+        "## Array manipulation\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kiEULPFn8BJ6"
+      },
+      "source": [
+        "### Convert the given integer numpy array to float"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "qRK19KU28BJ7"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "cJzPezfj8BJ7"
+      },
+      "outputs": [],
+      "source": [
+        "X = [-5, -3, 0, 10, 40]\n",
+        "\n",
+        "np.array(X, np.float)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Irkqx2qR8BJ7"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Reverse the given numpy array (first element becomes last)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "zap82EbI8BJ7"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "iVAUxemZ8BJ7"
+      },
+      "outputs": [],
+      "source": [
+        "X = [-5, -3, 0, 10, 40]\n",
+        "\n",
+        "X[::-1]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "a-xegeDe8BJ8"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Order (sort) the given numpy array"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "vc7yvooF8BJ8"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "a95ReOyD8BJ8"
+      },
+      "outputs": [],
+      "source": [
+        "X = [0, 10, -5, 40, -3]\n",
+        "\n",
+        "X.sort()\n",
+        "X"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0ivT085r8BJ8"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, set the fifth element equal to 1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "X0AOlBiV8BJ8"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "BWadYPZ98BJ9"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.zeros(10)\n",
+        "\n",
+        "X[4] = 1\n",
+        "X"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qsV0fNY58BJ9"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, change the 50 with a 40"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "t5nAx0Pp8BJ9"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "t8k9ijIQ8BJ9"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([10, 20, 30, 50])\n",
+        "\n",
+        "X[3] = 40\n",
+        "X"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "LpBbiGVX8BJ9"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, change the last row with all 1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ZsdJ27sU8BJ-"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "fLaIdYOm8BJ-"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "X[-1] = np.array([1, 1, 1, 1])\n",
+        "X"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MLSDf13B8BJ-"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, change the last item on the last row with a 0"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "NCeiSg-68BJ-"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "mcjw0_SM8BJ_"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "X[-1, -1] = 0\n",
+        "X"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "R1Iqxu8k8BJ_"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, add 5 to every element"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "br3FaJxa8BJ_"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "6nqTZnWG8BJ_"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "X + 5"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "YOhzt_tZ8BKA"
+      },
+      "source": [
+        "![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)\n",
+        "\n",
+        "## Boolean arrays _(also called masks)_\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fcQBylDn8BKA"
+      },
+      "source": [
+        "### Given the X numpy array, make a mask showing negative elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "LwkUKCR28BKB"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "6XubuEAC8BKC"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([-1,2,0,-4,5,6,0,0,-9,10])\n",
+        "\n",
+        "mask = X <= 0\n",
+        "mask"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "PHDSW5dy8BKC"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, get the negative elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Kg7tE4p98BKC"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "WQKf2hw_8BKD"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([-1, 2, 0, -4, 5, 6, 0, 0, -9, 10])\n",
+        "\n",
+        "mask = X <= 0\n",
+        "X[mask]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "u2OJXWcY8BKD"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, get numbers higher than 5"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "-kMVNHD48BKE"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "OApmWNYM8BKE"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([-1, 2, 0, -4, 5, 6, 0, 0, -9, 10])\n",
+        "\n",
+        "mask = X > 5\n",
+        "X[mask]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FAUP7DvK8BKE"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, get numbers higher than the elements mean"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6kyVZIYl8BKE"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "EOL8I6I08BKF"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([-1, 2, 0, -4, 5, 6, 0, 0, -9, 10])\n",
+        "\n",
+        "mask = X > X.mean()\n",
+        "X[mask]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "x_ptTgzQ8BKF"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, get numbers equal to 2 or 10"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "50k9Muuq8BKF"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "scrolled": true,
+        "id": "Ulxa_3LJ8BKF"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([-1, 2, 0, -4, 5, 6, 0, 0, -9, 10])\n",
+        "\n",
+        "mask = (X == 2) | (X == 10)\n",
+        "X[mask]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Cg4knAg_8BKG"
+      },
+      "source": [
+        "![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)\n",
+        "\n",
+        "## Logic functions\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0u7ecpXD8BKG"
+      },
+      "source": [
+        "### Given the X numpy array, return True if none of its elements is zero"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "F45KSXYd8BKG"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "JP1mQNFG8BKH"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([-1, 2, 0, -4, 5, 6, 0, 0, -9, 10])\n",
+        "\n",
+        "X.all()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "muBHo3dE8BKH"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, return True if any of its elements is zero"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "c5OIwpkd8BKH"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "8lFtScxU8BKH"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([-1, 2, 0, -4, 5, 6, 0, 0, -9, 10])\n",
+        "\n",
+        "X.any()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6MDUUt6r8BKI"
+      },
+      "source": [
+        "![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)\n",
+        "\n",
+        "## Summary statistics"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "EEGvNiXK8BKI"
+      },
+      "source": [
+        "### Given the X numpy array, show the sum of its elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "MBkxNopL8BKI"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "ZAv8gZF78BKI"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([3, 5, 6, 7, 2, 3, 4, 9, 4])\n",
+        "\n",
+        "#np.sum(X)\n",
+        "X.sum()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "J6PuTd5g8BKI"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, show the mean value of its elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "OwljbYs08BKI"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "GP-ucrNm8BKJ"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([1, 2, 0, 4, 5, 6, 0, 0, 9, 10])\n",
+        "\n",
+        "#np.mean(X)\n",
+        "X.mean()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JUVGJBVj8BKJ"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, show the sum of its columns"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "pczrLg4S8BKJ"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "FZ6_AK8n8BKJ"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "X.sum(axis=0) # remember: axis=0 columns; axis=1 rows"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bO7UaCu_8BKJ"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy matrix, show the mean value of its rows"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "CDSaDXQK8BKK"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "pdLPCNEh8BKK"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([\n",
+        "    [1,   2,  3,  4],\n",
+        "    [5,   6,  7,  8],\n",
+        "    [9,  10, 11, 12],\n",
+        "    [13, 14, 15, 16]\n",
+        "])\n",
+        "\n",
+        "X.mean(axis=1) # remember: axis=0 columns; axis=1 rows"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "F3-Q69Bg8BKK"
+      },
+      "source": [
+        "![green-divider](https://user-images.githubusercontent.com/7065401/52071924-c003ad80-2562-11e9-8297-1c6595f8a7ff.png)\n",
+        "\n",
+        "### Given the X numpy array, show the max value of its elements"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "_sbDpoP-8BKK"
+      },
+      "outputs": [],
+      "source": [
+        "# your code goes here\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "cell_type": "solution",
+        "id": "M6ahB6q18BKK"
+      },
+      "outputs": [],
+      "source": [
+        "X = np.array([1, 2, 0, 4, 5, 6, 0, 0, 9, 10])\n",
+        "\n",
+        "#np.max(X)\n",
+        "X.max()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NsU60Lq-8BKK"
+      },
+      "source": [
+        "![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)"
+      ]
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.7.4"
+    },
+    "colab": {
+      "provenance": []
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
